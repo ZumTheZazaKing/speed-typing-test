@@ -153,6 +153,8 @@ tr:nth-child(4){
 }
 
 #mobileFocuser{
+    width:0;
+    height:0;
     outline: none;
 }
 
