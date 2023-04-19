@@ -143,7 +143,7 @@ const detectKeyDown = e => {
         textToType.children[typed.length].classList.add('current')
         calculateWPM()
     }
-}; document.addEventListener('keypress',detectKeyDown,true)
+}; document.addEventListener('keydown',detectKeyDown,true)
 
 const goToLeaders = () => {
     leaderboard.classList.remove('hide')
