@@ -1,0 +1,166 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+body{
+    background-color: burlywood;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h2{
+    margin-bottom: 20px;
+}
+
+#textToType{
+    width: 90vw;
+    text-align: center;
+    font-size: 1.35rem;
+    line-height: 1.5;
+    font-weight: bold;
+}
+
+.unpolish{
+    opacity: 0.5;
+}
+
+.polish{
+    opacity: 1;
+}
+
+.wrong{
+    opacity: 1;
+    color: red;
+}
+
+.wrong-space{
+    opacity: 0.7;
+    background-color: red;
+}
+
+.current{
+    box-shadow: 0 5px 0 0 black;
+}
+
+.infoContainer{
+    margin: 20px auto;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.buttons{
+    margin-bottom: 10px;
+}
+
+.button{
+    font-size: 1.25rem;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.popup-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 5px;
+    width: 90vw;
+}
+
+.popup h2{
+    margin: 20px auto;
+}
+
+input{
+    padding: 5px 10px;
+    font-size: 16px;
+    margin: 10px auto;
+    width: 100%;
+}
+
+#backToMain{
+    margin-top: 20px;
+}
+
+table,th,td{
+    padding: 10px;
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+table{
+    width: 90vw;
+}
+
+th{
+    background-color: gray;
+    color: white;
+}
+
+tr{
+    background-color: white;
+}
+
+tr:nth-child(2){
+    background-color: gold;
+    font-weight: bold;
+}
+
+tr:nth-child(3){
+    background-color: silver;
+    font-weight: bold;
+}
+
+tr:nth-child(4){
+    background-color: rgb(220, 102, 70);
+    font-weight: bold;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.disabled{
+    opacity: 0.3;
+}
+
+.hide{
+    display: none;
+}
+
+/*responsive css (mobile first)*/
+@media only screen and (min-width:650px){
+    #textToType{
+        width: 40vw;
+    }
+    .popup{
+        width: 30vw;
+    }
+    table{
+        width: 50vw;
+    }
+}
