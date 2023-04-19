@@ -153,10 +153,9 @@ tr:nth-child(4){
 }
 
 #mobileFocuser{
-    width:0;
-    height:0;
-    padding:0;
-    outline: none;
+    opacity: 0;
+    z-index: -999;
+    position: absolute;
 }
 
 /*responsive css (mobile first)*/

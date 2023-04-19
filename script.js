@@ -23,7 +23,6 @@ let timeLeft = 30
 let wpm = 0
 let timeInterval
 let gameStart = false
-let acceptedKeys = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!;,.[]{}()\\'\"Backspace "
 
 //player input variables
 let playerName = ""
@@ -100,9 +99,10 @@ const restartGame = () => {
 }; restartButton.addEventListener('click',restartGame)
 
 const detectKeyDown = e => {
+    let typedChar = mobileFocuser.value.split("")[typeCount]
+    console.log(typedChar)
     if(!gameStart)return
-    if(!acceptedKeys.includes(e.key))return
-    if(e.key === "Backspace"){
+    if(typedChar == undefined){ //backspace
         typed.pop()
         --typeCount
         let formerNode = textToType.children[typed.length]
@@ -120,7 +120,7 @@ const detectKeyDown = e => {
 
 
     }else{
-        typed.push(e.key)
+        typed.push(typedChar)
         ++typeCount
         if(typed.length === textToType.children.length){
             setTextToType()
@@ -129,7 +129,7 @@ const detectKeyDown = e => {
         let currentNode = textToType.children[typed.length-1]
         currentNode.classList.remove('unpolish')
         currentNode.classList.remove('current')
-        if(e.key === currentNode.innerHTML){
+        if(typedChar === currentNode.innerHTML){
             currentNode.classList.add('polish')
 
         }else{
@@ -143,7 +143,7 @@ const detectKeyDown = e => {
         textToType.children[typed.length].classList.add('current')
         calculateWPM()
     }
-}; document.addEventListener('keydown',detectKeyDown,true)
+}; mobileFocuser.addEventListener('input',detectKeyDown,true)
 
 const goToLeaders = () => {
     leaderboard.classList.remove('hide')
