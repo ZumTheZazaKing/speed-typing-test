@@ -1,0 +1,160 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: burlywood;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+button{
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.main .textToType{
+    margin: 30px auto;
+    font-weight: bold;
+    font-size: 1.35rem;
+    cursor: pointer;
+}
+.unpolish{
+    opacity: 0.5;
+}
+.polish{
+    opacity: 1;
+}
+.wrong{
+    opacity: 1;
+    color: red;
+}
+.wrong-space{
+    opacity: 0.5;
+    background-color: red;
+}
+.current{
+    box-shadow: 0 5px 0 0 black;
+}
+
+.main .info{
+    font-size: 1.15rem;
+    font-weight: bold;
+}
+
+.main .buttons{
+    margin: 20px auto 10px auto;
+}
+
+.main .inputHolder{
+    opacity: 0;
+    z-index: -999;
+    position: absolute;
+}
+
+.leaderboard .table-container{
+    margin: 20px auto;
+}
+
+table,th,td{
+    padding: 5px 10px;
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+tr{
+    background-color: white;
+}
+
+tr:nth-child(2){
+    background-color: gold;
+    font-weight: bold;
+}
+tr:nth-child(3){
+    background-color: silver;
+    font-weight: bold;
+}
+tr:nth-child(4){
+    background-color: rgb(238, 180, 105);
+    font-weight: bold;
+}
+
+.popup-container{
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.popup{
+    background-color: rgb(181, 181, 181);
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90vw;
+}
+@keyframes popping{
+    from{transform: scale(0);}
+    to{transform: scale(1);}
+}
+@keyframes shake{
+    0%{transform: translateX(0);}
+    20%{transform: translateX(-100px);}
+    40%{transform: translateX(100px);}
+    60%{transform: translateX(-50px);}
+    80%{transform: translateX(50px);}
+    100%{transform: translateX(0);}
+}
+.popping{animation: popping .2s 1 ease-out forwards;}
+.shake{animation: shake .5s 1 ease-out forwards;}
+
+.popup h2{
+    margin: 20px auto;
+}
+
+.popup .nameInput{
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    margin: 10px auto;
+    width: 100%;
+}
+
+.popup .warning{
+    color: red;
+    font-weight: bold;
+}
+
+.popup .confirmBtn{
+    margin-top: 10px;
+}
+
+.disabled{
+    opacity: 0.3;
+}
+
+.hide{
+    display: none;
+}
+
+
+@media only screen and (min-width:768px){
+    .popup{
+        width: 30vw;
+    }
+    table{
+        width: 30vw;
+    }
+}

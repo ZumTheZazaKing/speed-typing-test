@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Speed Test Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main container">
+        <h2>Ujian Kelajuan Menaip</h2>
+
+        <p class="textToType">Sample Text</p>
+
+        <div class="info disabled">
+            <p>
+                Masa: <span class="timer">30</span>s
+                |
+                WPM: <span class="wpmHolder">0</span>
+            </p>
+        </div>
+
+        <div class="buttons">
+            <button class="startBtn">Mula</button>
+            <button class="restartBtn hide">Restart</button>
+        </div>
+
+        <button class="leaderboardBtn">Leaderboard</button>
+
+        <input type="text" class="inputHolder">
+    </div>
+
+    <div class="leaderboard container hide">
+        <h2>Leaderboard</h2>
+        <div class="table-container"></div>
+        <button class="backToMainBtn">Kembali ke Paparan Utama</button>
+    </div>
+
+    <div class="popup-container container hide">
+        <div class="popup">
+            <p>Your WPM is:</p>
+            <h2 class="wpmHolder">0</h2>
+            <p>Masukkan nama dan kelas:</p>
+            <input type="text" maxlength="20" class="nameInput" placeholder="Masukkan nama dan kelas">
+            <p class="warning hide">Player must have a name</p>
+            <button class="confirmBtn">Confirm</button>
+        </div>
+    </div>
+    
+    <script src="Texts.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
